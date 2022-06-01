@@ -17,9 +17,9 @@ public class Warrior {
     public int randomDamageOne() {
         Random rnd = new Random();
         int result = rnd.nextInt(2)*20;
-        if (result == 20) {System.out.println("Первый юнит атаковал и попал");}
-        else if (result == 0) {
-            System.out.println("Первый юнит атаковал и промахнулся");
+        if (result == 20) {System.out.println("Второй юнит атаковал и попал");}
+        else  {
+            System.out.println("Второй юнит атаковал и промахнулся");
         }
         return result;
     }
@@ -27,9 +27,9 @@ public class Warrior {
     public int randomDamageTwo() {
         Random rnd = new Random();
         int result = rnd.nextInt(2)*20;
-        if (result == 20) {System.out.println("Второй юнит атаковал и попал");}
-        else if (result == 0) {
-            System.out.println("Второй юнит атаковал и промахнулся");
+        if (result == 20) {System.out.println("Первый юнит атаковал и попал");}
+        else {
+            System.out.println("Первый юнит атаковал и промахнулся  ");
         }
         return result;
     }

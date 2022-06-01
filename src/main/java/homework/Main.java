@@ -8,17 +8,21 @@ public class Main {
         Warrior unit = new Warrior();
         Warrior unitOne = new Warrior(100);
         Warrior unitTwo = new Warrior(100);
-        for (int i = 0; i < 15; i++) {
-            unitOne.health = unitTwo.health - unit.randomDamageOne();
-            System.out.println("У второго юнита осталось здоровья:" + " " + unitOne.health);
+        System.out.println("Юниты вышли на арену");
+        System.out.println("У первого юнита" + " " + unitOne.health + " " + "здоровья");
+        System.out.println("У второго юнита" + " " + unitOne.health + " " + "здоровья");
+        System.out.println("Погнали!!!!!!!");
+        for (int i = 0; i < 10; i++) {
+            unitOne.health = unitOne.health - unit.randomDamageOne();
+            System.out.println("У первого юнита осталось здоровья:" + " " + unitOne.health);
             if (unitOne.health == 0) {
-                System.out.println("Игра окончена, победил первый юнит");
+                System.out.println("Игра окончена, победил второй юнит");
                 break;
             }
-            unitTwo.health = unitOne.health - unit.randomDamageTwo();
-            System.out.println("У первого юнита осталось здоровья:" + " " + unitTwo.health);
+            unitTwo.health = unitTwo.health - unit.randomDamageTwo();
+            System.out.println("У второго юнита осталось здоровья:" + " " + unitTwo.health);
             if (unitTwo.health == 0) {
-                System.out.println("Игра окончена, победил второй юнит");
+                System.out.println("Игра окончена, победил первый юнит");
                 break;
             }
         }
