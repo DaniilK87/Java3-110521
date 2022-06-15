@@ -3,19 +3,13 @@ package homework;
 
 import java.util.Random;
 
-import static homework.Warrior.randomStrike;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        Warrior unitOne = new Warrior(100, 20);
-        Warrior unitTwo = new Warrior(100, 20);
-            unitOne.strikeOne(100);
-        }
-
-
-
+        Warrior warriorOne = new Warrior(100, 20);
+        Warrior warriorTwo = new Warrior(100, 20);
+        System.out.println(warriorOne.toDamage());
 
 
         //Напишите программу по следующему описанию.
@@ -23,4 +17,5 @@ public class Main {
                 //В случайном порядке они бьют друг друга. Тот, кто бьет, здоровья не теряет. У того, кого бьют, оно уменьшается на 20 очков от одного удара.
                 //После каждого удара надо выводить сообщение, какой юнит атаковал, и сколько у противника осталось здоровья.
                 //Как только у кого-то заканчивается ресурс здоровья, программа завершается сообщением о том, кто одержал победу.
+    }
 }
