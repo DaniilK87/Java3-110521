@@ -1,43 +1,91 @@
 package homework;
 
+import java.util.Random;
+
 public class Warrior {
 
     int health;
+    String unitName;
     int damage;
 
+    public Warrior() {
+    }
 
-
-    public Warrior(int health, int damage) {
+    public Warrior(int health, String unitName) {
         this.health = health;
-        this.damage = damage;
+        this.unitName = unitName;
     }
 
+    private int randomMove() {
+        Random rnd = new Random();
+        int result = rnd.nextInt(2);
+        return result;
+    }
 
-    public void strikeOne(int health) {
-        for (int i = 0; i < 100; i++) {
-          int resultOne = health - randomStrike();
-          int resultTwo = resultOne - randomStrike();
-
-            System.out.println(resultOne);
-            System.out.println(resultTwo);
-          if (resultOne == 0) {
-              System.out.println("Победа 1");
-          } else if (resultTwo == 0) {
-              System.out.println("Победа 1");
-          }
+    public int randomDamage() {
+        if (randomMove() == 0) {
+            damage = 0;
+            //System.out.println(health);
+        } else {
+            damage = 20;
+            //System.out.println(health);
         }
+        return damage;
+    }
+
+    public int zeroDamage() {
+        if (randomMove() == 0) {
+            damage = 0;
+        }
+        return damage;
+    }
+
+    public int maxDamage() {
+        if (randomMove() == 20) {
+            damage = 20;
+        }
+        return damage;
     }
 
 
-    public static int randomStrike() {
-        return (int) (Math.random()*2)*20;
+
+
+}
+
+
+
+
+
+
+
+
+    /*public int randomDamageOne() {
+        Random rnd = new Random();
+        int result = rnd.nextInt(2) * 20;
+        if (result == 20) {
+            System.out.println("Второй юнит атаковал и попал");
+        } else {
+            System.out.println("Второй юнит атаковал и промахнулся");
+        }
+        return result;
     }
 
+    public int randomDamageTwo() {
+        Random rnd = new Random();
+        int result = rnd.nextInt(2) * 20;
+        if (result == 20) {
+            System.out.println("Первый юнит атаковал и попал");
+        } else {
+            System.out.println("Первый юнит атаковал и промахнулся  ");
+        }
+        return result;
+    }*/
 
-        //Напишите программу по следующему описанию.
+
+    //Напишите программу по следующему описанию.
         //Есть класс "Воин". От него создаются два экземпляра-юнита. Каждому устанавливается здоровье в 100 очков.
         //В случайном порядке они бьют друг друга. Тот, кто бьет, здоровья не теряет. У того, кого бьют, оно уменьшается на 20 очков от одного удара.
         //После каждого удара надо выводить сообщение, какой юнит атаковал, и сколько у противника осталось здоровья.
         //Как только у кого-то заканчивается ресурс здоровья, программа завершается сообщением о том, кто одержал победу.
-}
+
 
