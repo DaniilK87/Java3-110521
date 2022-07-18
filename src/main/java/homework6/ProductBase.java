@@ -37,7 +37,9 @@ public class ProductBase {
             Set<Map.Entry<String, Product>> entries = hashMap.entrySet();
             for (Map.Entry<String, Product> entry: entries){
                 for (String key: listKey) {
-                    //
+                    hashMap.put(key, entry.setValue(new Product(entry.getValue().getProductName(),entry
+                            .getValue().getCount() + 10)));
+                    break;
                 }
             }
         System.out.println(hashMap);

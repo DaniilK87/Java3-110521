@@ -17,6 +17,10 @@ public class Product {
         return Objects.hash(productName, count);
     }
 
+    public String getProductName() {
+        return productName;
+    }
+
     private String productName;
 
     public int getCount() {
